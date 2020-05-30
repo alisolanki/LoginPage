@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import './passwordField.dart';
-import './Animation/FadeAnimation.dart';
+import '../Animation/FadeAnimation.dart';
 
 class VerificationFields extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FadeAnimation(
-      1.8,
+      0.5,
       Container(
         padding: EdgeInsets.all(5),
         decoration: BoxDecoration(

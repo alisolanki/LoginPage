@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './Animation/FadeAnimation.dart';
+import '../Animation/FadeAnimation.dart';
 
 class LoginDecoration extends StatelessWidget {
   @override

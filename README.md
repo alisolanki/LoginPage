@@ -2,7 +2,7 @@
 
 > Simple Flutter Login and SignUp Page.
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)]
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ---
 
@@ -33,8 +33,7 @@
   <tr>
     <td align="center"><a href="http://www.alisolanki.gq"><img src="https://avatars3.githubusercontent.com/u/55312000?v=4" width="100px;" alt="Ali Solanki"/><br /><sub><b>Ali Solanki</b></sub></a><br/>💻</a>
     </td>
-  </tr>
-</table>
+  </tr></table>
 
 ---
 

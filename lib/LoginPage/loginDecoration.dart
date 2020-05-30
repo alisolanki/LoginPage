@@ -22,7 +22,7 @@ class LoginDecoration extends StatelessWidget {
                 margin: EdgeInsets.only(top: 50),
                 child: Center(
                   child: Text(
-                    "Login",
+                    "Logo",
                     style: TextStyle(
                         color: Color.fromRGBO(143, 148, 251, 1),
                         fontSize: 40,

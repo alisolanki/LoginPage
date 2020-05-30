@@ -8,9 +8,9 @@ class PasswordField extends StatefulWidget {
 class _PasswordFieldState extends State<PasswordField> {
   bool _ishidden = true;
 
+
   void _toggleVisibility() {
-    setState(
-      () {
+    setState(() {
         _ishidden = !_ishidden;
       },
     );

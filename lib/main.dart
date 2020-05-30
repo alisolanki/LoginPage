@@ -5,7 +5,7 @@ import 'LoginPage/loginPage.dart';
 void main() {
   runApp(
     MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,      
       home: HomePage(),
     ),
   );

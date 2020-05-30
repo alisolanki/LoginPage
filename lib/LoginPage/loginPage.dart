@@ -13,10 +13,10 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool _pageLogin = true;
+  // bool _rememberPassword = false;
 
   void _togglePage(bool _switchme) {
-    setState(
-      () {
+    setState(() {
         _pageLogin = _switchme;
       },
     );
@@ -39,11 +39,15 @@ class _LoginPageState extends State<LoginPage> {
                     FlatButton(
                       highlightColor: Colors.transparent,
                       splashColor: Colors.transparent,
-                      color: _pageLogin ? Color.fromRGBO(143, 148, 251, 1) : Colors.transparent,
+                      color: _pageLogin
+                          ? Color.fromRGBO(143, 148, 251, 1)
+                          : Colors.transparent,
                       child: Text(
                         "Login",
                         style: TextStyle(
-                          color: _pageLogin ? Colors.white : Color.fromRGBO(143, 148, 251, 1),
+                          color: _pageLogin
+                              ? Colors.white
+                              : Color.fromRGBO(143, 148, 251, 1),
                         ),
                       ),
                       onPressed: () {
@@ -53,11 +57,15 @@ class _LoginPageState extends State<LoginPage> {
                     FlatButton(
                       highlightColor: Colors.transparent,
                       splashColor: Colors.transparent,
-                      color: _pageLogin ? Colors.transparent : Color.fromRGBO(143, 148, 251, 1),
+                      color: _pageLogin
+                          ? Colors.transparent
+                          : Color.fromRGBO(143, 148, 251, 1),
                       child: Text(
                         "SignUp",
                         style: TextStyle(
-                          color: _pageLogin ? Color.fromRGBO(143, 148, 251, 1) : Colors.white,
+                          color: _pageLogin
+                              ? Color.fromRGBO(143, 148, 251, 1)
+                              : Colors.white,
                         ),
                       ),
                       onPressed: () {
@@ -73,30 +81,43 @@ class _LoginPageState extends State<LoginPage> {
                       child: Column(
                         children: <Widget>[
                           VerificationFields(),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          LoginButton(),
-                          SizedBox(
-                            height: 10,
-                          ),
+                          /* Remember Password */
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.end,
+                          //   children: <Widget>[
+                          //     Text("Remember Password?"),
+                          //     Checkbox(
+                          //       value: _rememberPassword ? true : false,
+                          //       onChanged: (bool _newValue) {
+                          //         setState(() {
+                          //             _rememberPassword = _newValue;
+                          //           },
+                          //         );
+                          //       },
+                          //     ),
+                          //   ],
+                          // ),
                           FadeAnimation(
                             0.5,
-                            FlatButton(
-                              highlightColor: Colors.transparent,
-                              splashColor: Colors.transparent,
-                              child: Text(
-                                "Forgot Password",
-                                style: TextStyle(
-                                  color: Color.fromRGBO(143, 148, 251, 1),
+                            Container(
+                              alignment: AlignmentDirectional(1.0, 0.0),
+                              child: FlatButton(
+                                highlightColor: Colors.transparent,
+                                splashColor: Colors.transparent,
+                                child: Text(
+                                  "Forgot Password?",
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(143, 148, 251, 1),
+                                  ),
                                 ),
+                                onPressed: () => {},
                               ),
-                              onPressed: () => {},
                             ),
                           ),
                           SizedBox(
                             height: 10,
                           ),
+                          LoginButton(),
                           // FadeAnimation(
                           //   0.5,
                           //   Row(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../Desktop/mydesktop.dart';
 import '../Animation/FadeAnimation.dart';
 
 class SignupButton extends StatelessWidget {
@@ -12,7 +12,16 @@ class SignupButton extends StatelessWidget {
         width: 100,
         child: RaisedButton(
           padding: EdgeInsets.all(0),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return MyDesktop();
+                },
+              ),
+            );
+          },
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
           child: Ink(

@@ -10,22 +10,27 @@ class LoginButton extends StatelessWidget {
       Container(
         height: 50,
         width: 100,
-        child: RaisedButton(
-          padding: EdgeInsets.all(0),
+        child: ElevatedButton(
           onPressed: () {},
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.white,
+            backgroundColor: const Color.fromRGBO(143, 148, 251, 1),
+            padding: const EdgeInsets.all(0),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+            elevation: 0,
+          ),
           child: Ink(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
+              borderRadius: BorderRadius.circular(30.0),
+              gradient: const LinearGradient(
                 colors: [
                   Color.fromRGBO(143, 148, 251, 1),
                   Color.fromRGBO(143, 148, 251, .6),
                 ],
               ),
-              borderRadius: BorderRadius.circular(30.0),
             ),
-            child: Center(
+            child: const Center(
               child: Text(
                 "Login",
                 style: TextStyle(

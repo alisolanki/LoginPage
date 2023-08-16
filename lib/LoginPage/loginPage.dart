@@ -15,9 +15,9 @@ class _LoginPageState extends State<LoginPage> {
   bool _pageLogin = true;
   // bool _rememberPassword = false;
 
-  void _togglePage(bool _switchme) {
+  void _togglePage(bool switchme) {
     setState(() {
-        _pageLogin = _switchme;
+        _pageLogin = switchme;
       },
     );
   }
@@ -35,49 +35,43 @@ class _LoginPageState extends State<LoginPage> {
                 0.5,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    FlatButton(
-                      highlightColor: Colors.transparent,
-                      splashColor: Colors.transparent,
-                      color: _pageLogin
-                          ? Color.fromRGBO(143, 148, 251, 1)
-                          : Colors.transparent,
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                          color: _pageLogin
-                              ? Colors.white
-                              : Color.fromRGBO(143, 148, 251, 1),
-                        ),
-                      ),
-                      onPressed: () {
-                        _togglePage(true);
-                      },
-                    ),
-                    FlatButton(
-                      highlightColor: Colors.transparent,
-                      splashColor: Colors.transparent,
-                      color: _pageLogin
-                          ? Colors.transparent
-                          : Color.fromRGBO(143, 148, 251, 1),
-                      child: Text(
-                        "SignUp",
-                        style: TextStyle(
-                          color: _pageLogin
-                              ? Color.fromRGBO(143, 148, 251, 1)
-                              : Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        _togglePage(false);
-                      },
-                    ),
-                  ],
+                  children: <Widget>[ElevatedButton(
+  style: ElevatedButton.styleFrom(
+    foregroundColor: _pageLogin
+        ? Colors.white
+        : const Color.fromRGBO(143, 148, 251, 1), backgroundColor: _pageLogin
+        ? const Color.fromRGBO(143, 148, 251, 1)
+        : Colors.transparent,
+    elevation: 0, // Adjust elevation as needed
+    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  ),
+  onPressed: () {
+    _togglePage(true);
+  },
+  child: const Text("Login"),
+),
+ElevatedButton(
+  style: ElevatedButton.styleFrom(
+    foregroundColor: _pageLogin
+        ? const Color.fromRGBO(143, 148, 251, 1)
+        : Colors.white, backgroundColor: _pageLogin
+        ? Colors.transparent
+        : const Color.fromRGBO(143, 148, 251, 1),
+    elevation: 0, // Adjust elevation as needed
+    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  ),
+  onPressed: () {
+    _togglePage(false);
+  },
+  child: const Text("SignUp"),
+),
+]
+                    
                 ),
               ),
               _pageLogin
                   ? Padding(
-                      padding: EdgeInsets.all(30.0),
+                      padding: const EdgeInsets.all(30.0),
                       child: Column(
                         children: <Widget>[
                           VerificationFields(),
@@ -100,21 +94,27 @@ class _LoginPageState extends State<LoginPage> {
                           FadeAnimation(
                             0.5,
                             Container(
-                              alignment: AlignmentDirectional(1.0, 0.0),
-                              child: FlatButton(
-                                highlightColor: Colors.transparent,
-                                splashColor: Colors.transparent,
-                                child: Text(
-                                  "Forgot Password?",
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(143, 148, 251, 1),
-                                  ),
-                                ),
-                                onPressed: () => {},
-                              ),
+                              alignment: const AlignmentDirectional(1.0, 0.0),
+                              child: ElevatedButton(
+  style: ElevatedButton.styleFrom(
+    foregroundColor: const Color.fromRGBO(143, 148, 251, 1), primary: Colors.transparent,
+    elevation: 0, // Adjust elevation as needed
+    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  ),
+  onPressed: () {
+    // Add your forgot password logic here
+  },
+  child: const Text(
+    "Forgot Password?",
+    style: TextStyle(
+      color: Color.fromRGBO(143, 148, 251, 1),
+    ),
+  ),
+),
+
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           LoginButton(),

@@ -12,18 +12,18 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(30.0),
+      padding: const EdgeInsets.all(30.0),
       child: Column(
         children: <Widget>[
           Container(
             child: FadeAnimation(
               0.5,
               Container(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Color.fromRGBO(143, 148, 251, .2),
                       blurRadius: 20.0,
@@ -34,11 +34,11 @@ class _SignupPageState extends State<SignupPage> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                            color: Colors.grey[100],
+                            color: Colors.grey.shade100,
                           ),
                         ),
                       ),
@@ -46,7 +46,7 @@ class _SignupPageState extends State<SignupPage> {
                         children: <Widget>[
                           TextField(
                             cursorColor: Colors.purpleAccent,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color.fromRGBO(143, 148, 251, 1)),
                             decoration: InputDecoration(
                               border: InputBorder.none,
@@ -56,7 +56,7 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           TextField(
                             cursorColor: Colors.purpleAccent,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color.fromRGBO(143, 148, 251, 1)),
                             decoration: InputDecoration(
                               border: InputBorder.none,
@@ -67,7 +67,7 @@ class _SignupPageState extends State<SignupPage> {
                           TextField(
                             keyboardType: TextInputType.emailAddress,
                             cursorColor: Colors.purpleAccent,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color.fromRGBO(143, 148, 251, 1)),
                             decoration: InputDecoration(
                               border: InputBorder.none,
@@ -78,7 +78,7 @@ class _SignupPageState extends State<SignupPage> {
                           TextField(
                             keyboardType: TextInputType.phone,
                             cursorColor: Colors.purpleAccent,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color.fromRGBO(143, 148, 251, 1)),
                             decoration: InputDecoration(
                               border: InputBorder.none,
@@ -96,7 +96,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           SignupButton(),
